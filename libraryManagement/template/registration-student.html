@@ -4,10 +4,10 @@
 
 <div align="center">
     <div>
-        <form action="{% url 'CreateBook'%}" method="POST">
+        <form action="{% url 'RegStudent'%}" method="POST">
         	{% csrf_token %}
-            {{book.as_p}}
-            {{book.errors}}
+            {{student.as_p}}
+            {{student.errors}}
             <input type="Submit" name="Submit">
         </form>
     </div>

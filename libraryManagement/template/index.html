@@ -10,17 +10,22 @@
       <div class="col-md-3">
         <h2>Lend</h2>
         <p>Some one Need a book. To study offcourse. you can try Clicking me.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Click Me &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'LendBook' %}" role="button">Click Me &raquo;</a></p>
       </div>
       <div class="col-md-3">
         <h2>Return</h2>
         <p>Hey!! Did You Read the Book you take. click on me to Return.  </p>
-        <p><a class="btn btn-secondary" href="#" role="button">Click Me &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'ReturnBook' %}" role="button">Click Me &raquo;</a></p>
       </div>
       <div class="col-md-3">
         <h2>Availability</h2>
         <p>Hey wanna Know the book you want is available or not. try me and search through class, semester and through Grade by clicking me.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">Click Me &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{% url 'Availability' %}" role="button">Click Me &raquo;</a></p>
+      </div>
+      <div class="col-md-3">
+        <h2>Student Registration</h2>
+        <p>create profile for student for library by clicking</p>
+        <p><a class="btn btn-secondary" href="{% url 'RegStudent' %}" role="button">Click Me &raquo;</a></p>
       </div>
     </div>
 
