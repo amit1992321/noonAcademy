@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{%  block body %}
+
+<div align="center">
+    <div>
+        <form action="{% url 'RegStudent'%}" method="POST">
+        	{% csrf_token %}
+            {{student.as_p}}
+            {{student.errors}}
+            <input type="Submit" name="Submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

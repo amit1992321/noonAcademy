@@ -2,6 +2,15 @@
 
 {%  block body %}
 
-Create Book here using form
+<div align="center">
+    <div>
+        <form action="{% url 'CreateBook'%}" method="POST">
+        	{% csrf_token %}
+            {{book.as_p}}
+            {{book.errors}}
+            <input type="Submit" name="Submit">
+        </form>
+    </div>
+</div>
 
 {% endblock %}

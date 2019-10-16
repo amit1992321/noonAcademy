@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block headings %} List of Book Available Currently {% endblock %}
+{% block body %}
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Class</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Semester</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for i in obj %}
+    <tr>
+      <th scope="row">{{ i.id }}</th>
+      <td>{{ i.title }}</td>
+      <td>{{ i.author }}</td>
+      <td>{{ i.Class }}</td>
+      <td>{{ i.grade }} </td>
+	  <td>{{ i.semester }}</td>
+    </tr>
+    {% endfor %}
+      </tbody>
+</table>
+
+
+{% endblock %}
