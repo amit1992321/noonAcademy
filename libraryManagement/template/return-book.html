@@ -1,12 +1,61 @@
 {% extends 'base.html' %}
+
 {% block body %}
 <div align="center">
     <div>
         <form action="{% url 'ReturnBook'%}" method="POST">
         	{% csrf_token %}
             
-            {{return_book.as_p}}
-            
+           <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ISBN</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Class</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Semester</th>
+    </tr>
+  </thead>
+  <tbody>
+  	
+    <tr>
+      <th scope="row"><input type="text" name="ISBN"> </th>
+      <td>{{ obj_book.title }}</td>
+      <td>{{ obj_book.author }}</td>
+      <td>{{ obj_book.Class }}</td>
+      <td>{{ obj_book.grade }} </td>
+	  <td>{{ obj_book.semester }}</td>
+	  
+    </tr>
+      </tbody>
+</table>
+           <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">UID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Course</th>
+      <th scope="col">Semester</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+    </tr>
+  </thead>
+  <tbody>
+  	
+    <tr>
+      <th scope="row"><input type="text" name="UID"></th>
+
+   
+      <td>{{ obj_student.name }}</td>
+      <td>{{ obj_student.course }}</td>
+      <td>{{ obj_student.semester }}</td>
+      <td>{{ obj_student.email }} </td>
+	  <td>{{ obj_student.mobile }}</td>
+	 
+    </tr>
+      </tbody>
+</table>
             {{lend_book.errors}}
             
             <input type="Submit" name="Submit">
