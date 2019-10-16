@@ -22,15 +22,3 @@ def createBook(request):
             'errors': error
         }
     return render(request, "createBook.html", context)
-
-
-def availability(request):
-    return render(request, "availability.html", {})
-
-
-def lendBook(request):
-    return render(request, "lend-book.html", {})
-
-
-def returnBook(request):
-    return render(request, "return-book.html", {})

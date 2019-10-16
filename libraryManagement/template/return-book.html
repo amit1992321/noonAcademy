@@ -1,4 +1,17 @@
 {% extends 'base.html' %}
 {% block body %}
+<div align="center">
+    <div>
+        <form action="{% url 'ReturnBook'%}" method="POST">
+        	{% csrf_token %}
+            
+            {{return_book.as_p}}
+            
+            {{lend_book.errors}}
+            
+            <input type="Submit" name="Submit">
+        </form>
+    </div>
+</div>
 
 {% endblock %}

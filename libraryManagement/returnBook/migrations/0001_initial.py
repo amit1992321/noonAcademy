@@ -11,16 +11,18 @@ class Migration(migrations.Migration):
     dependencies = [
         ('Student', '0001_initial'),
         ('Books', '0001_initial'),
+        ('LendBook', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='LendBook',
+            name='ReturnBook',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('lend_book_from', models.DateField()),
-                ('lend_book_till', models.DateField()),
+                ('return_date', models.DateField()),
+                ('Fine', models.IntegerField()),
                 ('Book', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Books.Book')),
+                ('LendBook', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='LendBook.LendBook')),
                 ('Student', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Student.Student')),
             ],
         ),
